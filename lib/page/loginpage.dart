@@ -2,11 +2,21 @@ import 'package:flutter/material.dart';
 //--------------------------------------------- Bloc
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../TongCustom/Screen/SignIn_Screen/SingInScreen.dart';
 import '../bloc/BlocEvent/LoginEvent.dart';
 import '../mainBody.dart';
 import '../widget/common/ComInputText.dart';
 import '../data/global.dart';
 
+class LoginPageWidget extends StatelessWidget {
+  const LoginPageWidget({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return LoginScreen_TongCS();
+  }
+}
+/*
 class LoginPageWidget extends StatelessWidget {
   const LoginPageWidget({Key? key}) : super(key: key);
 
@@ -177,4 +187,4 @@ class _LoginSignin extends StatelessWidget {
           ),
         ));
   }
-}
+}*/

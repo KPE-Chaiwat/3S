@@ -587,7 +587,7 @@ class _Box_notification_infoState extends State<Box_notification_info> {
         ));
     //----------------------------------------------------------------
 
-    Timer(Duration(seconds: 3), () {
+    Timer(Duration(seconds: 2), () {
       // Navigator.pop(context);
       widget.Close_Func();
     });

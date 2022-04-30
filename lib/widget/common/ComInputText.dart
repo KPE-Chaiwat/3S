@@ -201,7 +201,7 @@ class _ComInputTextState extends State<ComInputText> {
 
     String getShowHidePassword_ImgPath() {
       if (_isHidePassword) {
-        return 'assets/icons/icon-eyeclose@3x.png';
+        return 'assets/icons/icon-eyecllose@3x.png';
       } else {
         return 'assets/icons/icon-eye@3x.png';
       }
@@ -217,10 +217,10 @@ class _ComInputTextState extends State<ComInputText> {
             child: Container(
               height: widget.iconheight ?? 24,
               width: widget.iconwidth ?? 24,
-              // decoration: BoxDecoration(
-              //     image: DecorationImage(
-              //         image: AssetImage(getShowHidePassword_ImgPath()),
-              //         fit: BoxFit.fitHeight)),
+              //     decoration: BoxDecoration(
+              //         image: DecorationImage(
+              //             image: AssetImage(getShowHidePassword_ImgPath()),
+              //             fit: BoxFit.fitHeight)),
             ),
           ),
         );

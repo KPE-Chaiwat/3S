@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:tpk_login_v2/widget/appbar/NongTongCustomAppbar/NongtongCustomAppbbar.dart';
 
 import 'bloc/BlocEvent/ChangePageEvent.dart';
 import 'bloc/BlocEvent/LoginEvent.dart';
@@ -91,11 +92,13 @@ class MainBody extends StatelessWidget {
     MainBodyContext = context;
 
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: const Color(0xFF0b1327),
-          actions: <Widget>[App_Bar()],
-        ),
-        drawer: MainMenu(),
+        // appBar: AppBar(
+        //   backgroundColor: const Color(0xFFFEE2F9),
+
+        //   //actions: <Widget>[App_Bar()],
+        //   actions: <Widget>[App_Bar_NongtongCustom()],
+        // ),
+        // drawer: MainMenu(),
         body: page);
   }
 }

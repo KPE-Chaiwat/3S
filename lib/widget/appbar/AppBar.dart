@@ -64,7 +64,7 @@ class Logo2 extends StatelessWidget {
             padding: const EdgeInsetsDirectional.all(1),
             child: Container(
               height: 35,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Colors.white,
                 image: DecorationImage(
                   image: AssetImage("assets/images/logo_tpk.png"),
@@ -91,8 +91,8 @@ class Logo1 extends StatelessWidget {
       padding: const EdgeInsets.only(left: 25),
       child: Container(
         color: Color(0xff0b1327),
-        child: Text(
-          "Thaiparker",
+        child: const Text(
+          "SAR",
           style: TextStyle(
             fontFamily: 'Mitr',
             color: Colors.white,
@@ -114,10 +114,10 @@ class Pack_topright_bar extends StatelessWidget {
       padding: const EdgeInsets.only(right: 20),
       child: Container(
           width: 150,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [Time_(), Icon_bell(), Icon_profile()],
-          )),
+          child: Row(mainAxisAlignment: MainAxisAlignment.end, children: [
+            Icon_profile()
+          ] //[Time_(), Icon_bell(), Icon_profile()],
+              )),
     );
   }
 }
@@ -130,7 +130,7 @@ class Icon_bell extends StatelessWidget {
     return Container(
       // width: 24,
       // height: 24,
-      decoration: new BoxDecoration(
+      decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(8),
       ),
       child: IconButton(
@@ -144,16 +144,21 @@ class Icon_bell extends StatelessWidget {
 class Icon_profile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new InkWell(
+    return InkWell(
       onLongPress: () {
-        LoginContext.read<Login_Bloc>().add(Logout());
+        //  LoginContext.read<Login_Bloc>().add(Logout());
       },
-      child: Container(
-          width: 24,
-          height: 24,
-          decoration: new BoxDecoration(
-              borderRadius: BorderRadius.circular(8),
-              color: Colors.brown.shade300)),
+      // child: Container(
+      //     width: 30,
+      //     height: 30,
+      // decoration: BoxDecoration(
+      //     borderRadius: BorderRadius.circular(8),
+      //     color: Colors.brown.shade300),
+      //child: Icon(Icons.account_circle)),
+      child: const Icon(
+        Icons.account_circle,
+        size: 30.0,
+      ),
     );
   }
 }
@@ -174,7 +179,7 @@ class _Time_State extends State<Time_> {
         return Center(
           child: Text(
             DateFormat(' hh:mm a').format(DateTime.now()),
-            style: TextStyle(
+            style: const TextStyle(
               fontFamily: 'Mitr',
               color: Colors.white,
               fontSize: 16,
