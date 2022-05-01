@@ -10,9 +10,14 @@ class Suicidality extends StatelessWidget {
         fontSize: 35, color: Color.fromARGB(255, 185, 128, 194));
     return SizedBox(
       //color: Colors.blueGrey,
-      child: Text(
-        title,
-        style: styleText,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          Text(
+            title,
+            style: styleText,
+          ),
+        ],
       ),
     );
   }

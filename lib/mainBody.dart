@@ -92,14 +92,15 @@ class MainBody extends StatelessWidget {
     MainBodyContext = context;
 
     return Scaffold(
-        // appBar: AppBar(
-        //   backgroundColor: const Color(0xFFFEE2F9),
-
-        //   //actions: <Widget>[App_Bar()],
-        //   actions: <Widget>[App_Bar_NongtongCustom()],
-        // ),
-        // drawer: MainMenu(),
-        body: page);
+      appBar: AppBar(
+        backgroundColor: const Color(0xFFFFE9F1),
+        shadowColor: Colors.transparent,
+        //actions: <Widget>[App_Bar()],
+        actions: <Widget>[App_Bar_NongtongCustom()],
+      ),
+      drawer: MainMenu(),
+      body: page,
+    );
   }
 }
 

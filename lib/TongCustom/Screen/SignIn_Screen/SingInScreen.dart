@@ -24,39 +24,26 @@ class LoginScreen_TongCS extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: Container(
+          height: MediaQuery.of(context).size.height,
           width: _width,
-          // color: Colors.amber,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              space(30),
-              const LogoSar(),
-              const LineContainer(),
-              space(20),
-              const Suicidality(
-                title: "Suicidality and",
-              ),
-              const Suicidality(
-                title: "Rick Assessment",
-              ),
-              space(30),
-              ComInputText(
-                sPlaceholder: "เลขประจำตัวผู้เก็บข้อมูล",
-                height: 40,
-                width: _width,
-                isContr: Logindata_constant.isControl,
-                fnContr: (input) {
-                  Logindata_constant.isControl = input;
-                },
-                sValue: Logindata_constant.userID,
-                returnfunc: (String s) {
-                  Logindata_constant.userID = s;
-                },
-                isEnabled: true,
-              ),
-              space(30),
-              ComInputText(
-                  sPlaceholder: "รหัสผ่าน",
+          color: Colors.amber,
+          child: SingleChildScrollView(
+            physics: const BouncingScrollPhysics(),
+            child: Column(
+              children: [
+                space(30),
+                const LogoSar(),
+                const LineContainer(),
+                space(20),
+                const Suicidality(
+                  title: "Suicidality and",
+                ),
+                const Suicidality(
+                  title: "Rick Assessment",
+                ),
+                space(30),
+                ComInputText(
+                  sPlaceholder: "เลขประจำตัวผู้เก็บข้อมูล",
                   height: 40,
                   width: _width,
                   isContr: Logindata_constant.isControl,
@@ -68,23 +55,39 @@ class LoginScreen_TongCS extends StatelessWidget {
                     Logindata_constant.userID = s;
                   },
                   isEnabled: true,
-                  isPassword: true),
-              space(20),
-              const ForgotPassword(),
-              space(50),
-              const ButtonCS(
-                  colorButton: Colors.black,
-                  colorText: Colors.white,
-                  textInButton: " ผู้ใช้งาน"),
-              space(30),
-              const ButtonCS(
-                  colorBorder: Colors.black,
-                  colorButton: Colors.white,
-                  colorText: Colors.black,
-                  textInButton: "ลงทะเบียนผู้ใช้งานใหม่"),
-              space(80),
-              SimpleText()
-            ],
+                ),
+                space(30),
+                ComInputText(
+                    sPlaceholder: "รหัสผ่าน",
+                    height: 40,
+                    width: _width,
+                    isContr: Logindata_constant.isControl,
+                    fnContr: (input) {
+                      Logindata_constant.isControl = input;
+                    },
+                    sValue: Logindata_constant.userID,
+                    returnfunc: (String s) {
+                      Logindata_constant.userID = s;
+                    },
+                    isEnabled: true,
+                    isPassword: true),
+                space(20),
+                const ForgotPassword(),
+                space(50),
+                const ButtonCS(
+                    colorButton: Colors.black,
+                    colorText: Colors.white,
+                    textInButton: " ผู้ใช้งาน"),
+                space(30),
+                const ButtonCS(
+                    colorBorder: Colors.black,
+                    colorButton: Colors.white,
+                    colorText: Colors.black,
+                    textInButton: "ลงทะเบียนผู้ใช้งานใหม่"),
+                space(80),
+                SimpleText()
+              ],
+            ),
           ),
         ),
       ),

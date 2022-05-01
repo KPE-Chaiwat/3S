@@ -25,7 +25,7 @@ class App_Bar_NongtongCustomState extends State<App_Bar_NongtongCustom> {
       height: 70,
       width: MediaQuery.of(context).size.width,
       //color: Color(0xff0b1327),
-      color: const Color(0xFFFEE2F9),
+      color: const Color(0xFFFFE9F1),
 
       // changes position of shadow
 

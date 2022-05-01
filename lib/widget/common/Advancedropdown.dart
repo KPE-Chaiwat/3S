@@ -8,26 +8,39 @@ class AdvanceDropDown extends StatefulWidget {
     required this.value,
     required this.width,
     required this.height,
+    this.hint,
   }) : super(key: key);
   List<MapEntry<String, String>>? listdropdown;
   Function onChangeinside;
   String value;
   double width;
   double height;
+  String? hint;
 
   @override
   State<AdvanceDropDown> createState() => _AdvanceDropDownState();
 }
 
 class _AdvanceDropDownState extends State<AdvanceDropDown> {
+  String? _showstr;
   @override
   Widget build(BuildContext context) {
     List<MapEntry<String, String>> _listdropdown =
-        widget.listdropdown ?? [MapEntry("", "")];
+        widget.listdropdown ?? []; //MapEntry("", "")
 
     //AdvanceDropDownOB(text: "DYNAMIC", value: "DYNAMIC-V")
     List<DropdownMenuItem<String>> menuItems = [
       DropdownMenuItem(child: Text(""), value: "")
+    ];
+
+    List outputZ = [];
+
+    List outputR = [
+      for (int i = 0; i < _listdropdown.length; i++)
+        DropdownMenuItem(
+          value: _listdropdown[i].value,
+          child: Text(_listdropdown[i].key.toString()),
+        )
     ];
 
     return Container(
@@ -37,8 +50,9 @@ class _AdvanceDropDownState extends State<AdvanceDropDown> {
       child: DropdownButton<String>(
         // borderRadius: BorderRadius.all(Radius.circular(10)),
         // disabledHint: Text("123"),
-
-        value: widget.value,
+        hint: Text(widget.hint ?? 'Select something'),
+        // disabledHint: Text("Disable Hint"),
+        value: _showstr,
         isExpanded: true,
         // iconDisabledColor: Colors.transparent,
         // iconEnabledColor: Colors.transparent,
@@ -55,8 +69,10 @@ class _AdvanceDropDownState extends State<AdvanceDropDown> {
           setState(() {
             widget.onChangeinside(newValue!);
             widget.value = newValue;
+            _showstr = newValue;
           });
         },
+
         items: [
           for (int i = 0; i < _listdropdown.length; i++)
             DropdownMenuItem(

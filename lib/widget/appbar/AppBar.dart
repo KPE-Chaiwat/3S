@@ -26,7 +26,7 @@ class _App_BarState extends State<App_Bar> {
     return Container(
       height: 70,
       width: MediaQuery.of(context).size.width,
-      color: Color(0xff0b1327),
+      color: const Color(0xFFFFE9F1),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

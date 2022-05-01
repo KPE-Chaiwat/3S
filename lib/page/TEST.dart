@@ -42,7 +42,7 @@ class _testbuttonState extends State<testbutton> {
           },
           value: test01,
           height: 40,
-          width: 100,
+          width: 400,
         ),
       ),
     );
