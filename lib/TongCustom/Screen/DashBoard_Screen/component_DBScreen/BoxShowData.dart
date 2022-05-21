@@ -13,19 +13,26 @@ class BoxShowDataSource extends StatelessWidget {
   final Color color;
   @override
   Widget build(BuildContext context) {
+    const int _height_IphoneSE = 670;
+    final double _query_height = MediaQuery.of(context).size.height;
+    double _height =
+        _query_height < _height_IphoneSE ? 140.0 : 155.0; //custom heightbox
+    double _width =
+        _query_height < _height_IphoneSE ? 135.0 : 150.0; //custom heightbox
     TextStyle _style(double size, bool fontWeight) => TextStyle(
         fontSize: size,
         fontWeight: fontWeight ? FontWeight.bold : FontWeight.normal);
+
     return Container(
-        height: 155,
-        width: 150,
+        height: _height, //155,
+        width: _width,
         decoration: BoxDecoration(
           color: color,
           border: Border.all(
             width: 1.2,
             color: Colors.black38,
           ),
-          borderRadius: BorderRadius.all(
+          borderRadius: const BorderRadius.all(
               Radius.circular(20.0) //                 <--- border radius here
               ),
         ),
@@ -58,4 +65,6 @@ class BoxShowDataSource extends StatelessWidget {
           ],
         ));
   }
+
+  custtomHeightBox() {}
 }

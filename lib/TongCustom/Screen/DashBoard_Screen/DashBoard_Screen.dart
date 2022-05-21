@@ -1,15 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:tpk_login_v2/TongCustom/ConStant/constant.dart';
-import 'package:tpk_login_v2/widget/appbar/AppBar.dart';
 
-import '../../../widget/appbar/NongTongCustomAppbar/NongtongCustomAppbbar.dart';
-
-import '../../../widget/common/Advancedropdown.dart';
-import '../../Component_All/NongTong_Dropdown.dart';
-import '../SignIn_Screen/Conponent_LoginScreen/lineCustom.dart';
 import 'component_DBScreen/BoxShowData.dart';
 import 'component_DBScreen/ButtonAppBar.dart';
+import 'component_DBScreen/DropDown_NongTongCs.dart';
 import 'component_DBScreen/line.dart';
+import 'component_DBScreen/ Boxborder.dart';
 
 class DashBoardScreen extends StatelessWidget {
   const DashBoardScreen({Key? key}) : super(key: key);
@@ -27,118 +22,84 @@ class DashBoardScreen extends StatelessWidget {
       MapEntry("4", "kku4"),
     ];
     String _value = "kku1";
-
-    return SingleChildScrollView(
-      child: Container(
-        color: _bgColor1,
+    double specing_left_right = 30.0;
+    return Center(
         child: Column(
-          children: [
-            Container(
-              color: _bgColor1,
-              height: 20,
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        TopBoxBorder(
+            width: _width,
+            color: Colors.white,
+            title: 'สถิติการฆ่าตัวตายภายในพื้นที่'),
+        Padding(
+          padding: EdgeInsets.fromLTRB(
+              specing_left_right, 15.0, specing_left_right, 10.0),
+          child: Column(
+            children: [
+              AdvanceDropDown_NongTongCs(
+                  topicOfDropdown: "เลือกระดับพื้นที่",
+                  hint: "เขตสุขภาพ",
+                  onChangeinside: (newValue) {},
+                  value: _value,
+                  width: _width,
+                  height: 50,
+                  listdropdown: _itemDropdown),
+              const SizedBox(
+                height: 10,
+              ),
+              AdvanceDropDown_NongTongCs(
+                  topicOfDropdown: "เลือกพื้นที่",
+                  hint: "เขตสุขภาพที่7",
+                  onChangeinside: (newValue) {},
+                  value: _value,
+                  width: _width,
+                  height: 50,
+                  listdropdown: _itemDropdown),
+            ],
+          ),
+        ),
+        Line(
+          padding_top: 0,
+          padding_left: specing_left_right,
+          padding_right: specing_left_right,
+          padding_bottom: 10,
+        ),
+        Wrap(
+          spacing: 15.0, // gap between adjacent chips
+          runSpacing: 15.0,
+          children: const [
+            BoxShowDataSource(
+              color: Color(0xffFFF3C8),
+              title: "RowRick",
+              subtitle: "จำนวนผู้ป่วยกลุ่มเสียงต่อการฆ่าตัวตายต่ำ",
+              subtitle1: "9,999",
+              subtitle2: "คน",
             ),
-            Container(
-              width: _width,
-              height: _height,
-              // alignment: Alignment.center,
-              decoration: const BoxDecoration(
-                color: Colors.pink,
-                borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(40),
-                    topRight: Radius.circular(40)),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black26,
-                    blurRadius: 5,
-                    offset: Offset(0, -3), // Shadow position
-                  ),
-                ],
-              ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  const SizedBox(
-                    height: 30,
-                  ),
-                  Text(
-                    "สถิติการฆ่าตัวตายในพื้นที่",
-                    style: Logindata_constant.textStyle_title(18),
-                  ),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  AdvanceDropDown(
-                      hint: "fffff",
-                      onChangeinside: (newValue) {},
-                      value: _value,
-                      width: 300,
-                      height: 50,
-                      listdropdown: _itemDropdown),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  AdvanceDropDown(
-                      hint: "fffff",
-                      onChangeinside: (newValue) {},
-                      value: _value,
-                      width: 300,
-                      height: 50,
-                      listdropdown: _itemDropdown),
-                  const SizedBox(
-                    height: 20,
-                  ),
-                  const Padding(
-                    padding: EdgeInsets.fromLTRB(40, 15, 40, 20),
-                    child: Line(), //*เส้นตรง
-                  ),
-                  const SizedBox(
-                    height: 20,
-                  ),
-                  Wrap(
-                    spacing: 15.0, // gap between adjacent chips
-                    runSpacing: 15.0,
-
-                    children: const [
-                      BoxShowDataSource(
-                        color: Color(0xffFFF3C8),
-                        title: "RowRick",
-                        subtitle: "จำนวนผู้ป่วยกลุ่มเสียงต่อการฆ่าตัวตายต่ำ",
-                        subtitle1: "9,999",
-                        subtitle2: "คน",
-                      ),
-                      BoxShowDataSource(
-                        color: Color(0xffFFDFC9),
-                        title: "RowRick",
-                        subtitle: "จำนวนผู้ป่วยกลุ่มเสียงต่อการฆ่าตัวตายต่ำ",
-                        subtitle1: "9,999",
-                        subtitle2: "คน",
-                      ),
-                      BoxShowDataSource(
-                        color: Color(0xffFFEBEB),
-                        title: "RowRick",
-                        subtitle: "จำนวนผู้ป่วยกลุ่มเสียงต่อการฆ่าตัวตายต่ำ",
-                        subtitle1: "9,999",
-                        subtitle2: "คน",
-                      ),
-                      BoxShowDataSource(
-                        color: Color(0xffDFB9FF),
-                        title: "RowRick",
-                        subtitle: "จำนวนผู้ป่วยกลุ่มเสียงต่อการฆ่าตัวตายต่ำ",
-                        subtitle1: "9,999",
-                        subtitle2: "คน",
-                      ),
-                    ],
-                  ),
-                  const SizedBox(
-                    height: 20,
-                  ),
-                  BottomAppBar_NongTongCS(),
-                ],
-              ),
+            BoxShowDataSource(
+              color: Color(0xffFFDFC9),
+              title: "RowRick",
+              subtitle: "จำนวนผู้ป่วยกลุ่มเสียงต่อการฆ่าตัวตายต่ำ",
+              subtitle1: "9,999",
+              subtitle2: "คน",
+            ),
+            BoxShowDataSource(
+              color: Color(0xffFFEBEB),
+              title: "RowRick",
+              subtitle: "จำนวนผู้ป่วยกลุ่มเสียงต่อการฆ่าตัวตายต่ำ",
+              subtitle1: "9,999",
+              subtitle2: "คน",
+            ),
+            BoxShowDataSource(
+              color: Color(0xffDFB9FF),
+              title: "RowRick",
+              subtitle: "จำนวนผู้ป่วยกลุ่มเสียงต่อการฆ่าตัวตายต่ำ",
+              subtitle1: "9,999",
+              subtitle2: "คน",
             ),
           ],
         ),
-      ),
-    );
+        const BottomAppBar_NongTongCS(),
+      ],
+    ));
   }
 }

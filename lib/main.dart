@@ -41,6 +41,7 @@ class MainContext extends StatelessWidget {
           title: 'Flutter Login',
           theme: ThemeData(
             primarySwatch: Colors.blue,
+            // backgroundColor: Color(0xffFFE9F1),
           ),
           debugShowCheckedModeBanner: false,
           home: const MainBlocRebuild(),
