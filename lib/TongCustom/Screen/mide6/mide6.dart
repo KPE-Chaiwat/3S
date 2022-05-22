@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../widget/common/Checkbox.dart';
+import 'compronent_mide6/ListTextSymptom.dart';
 import 'compronent_mide6/TextString.dart';
 import 'compronent_mide6/groupText_detailData.dart';
 
@@ -18,6 +19,7 @@ class _Mide6State extends State<Mide6> {
     SizedBox spaceHeight(height) => SizedBox(
           height: height,
         );
+
     return Container(
       width: size.width,
       height: size.height,
@@ -35,29 +37,29 @@ class _Mide6State extends State<Mide6> {
       ),
       child: SingleChildScrollView(
           child: Padding(
-        padding: EdgeInsets.only(left: 25, right: 25),
+        padding: const EdgeInsets.only(left: 25, right: 25),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             spaceHeight(27.5),
-            TextStr(
+            const TextStr(
               msg: "Mind-6",
               sizeMsg: 28.0,
               fontWeight: true,
             ),
             spaceHeight(12.0),
-            TextStr(
+            const TextStr(
               msg: "แบบประเมินโรคจิต",
               sizeMsg: 18.0,
               fontWeight: true,
             ),
             spaceHeight(25.5),
-            TextStr(
+            const TextStr(
               msg: "ผู้ป่วยมีอาการเหล่านี้เกิดขึ้นหรือไม่",
               sizeMsg: 14.0,
               fontWeight: true,
             ),
-            TextStr(
+            const TextStr(
               msg: "ในช่วง 2 สัปดาห์ที่ผ่านมา",
               sizeMsg: 14.0,
             ),
@@ -67,13 +69,21 @@ class _Mide6State extends State<Mide6> {
                   getChbox: () {},
                   value: false,
                 ),
-                TextStr(
+                const TextStr(
                   msg: "มีลักษณะการพูดที่ผิดปกติ",
                   sizeMsg: 14.0,
                 ),
               ],
             ),
-            Container(height: 70, width: size.width, color: Colors.pink),
+            Container(
+              padding: const EdgeInsets.only(left: 46.0),
+              //height: 70,
+              width: size.width,
+              color: Colors.pink,
+              child: ListSymptom(
+                symptomText: GroupDetailMide6.speakingWrong,
+              ),
+            ),
             spaceHeight(16.0),
             Row(
               children: [
@@ -81,13 +91,21 @@ class _Mide6State extends State<Mide6> {
                   getChbox: () {},
                   value: false,
                 ),
-                TextStr(
+                const TextStr(
                   msg: "มีลักษณะการแต่งกายที่ผิดปกติ",
                   sizeMsg: 14.0,
                 ),
               ],
             ),
-            Container(height: 70, width: size.width, color: Colors.pink),
+            Container(
+              padding: const EdgeInsets.only(left: 46.0),
+              //height: 70,
+              width: size.width,
+              color: Colors.pink,
+              child: ListSymptom(
+                symptomText: GroupDetailMide6.dressingWrong,
+              ),
+            ),
             spaceHeight(16.0),
             Row(
               children: [
@@ -95,13 +113,21 @@ class _Mide6State extends State<Mide6> {
                   getChbox: () {},
                   value: false,
                 ),
-                TextStr(
+                const TextStr(
                   msg: "มีพฤติกรรมก้าวร้าว วุ่นวาย ทำร้ายผู้อื่น",
                   sizeMsg: 14.0,
                 ),
               ],
             ),
-            Container(height: 70, width: size.width, color: Colors.pink),
+            Container(
+              padding: const EdgeInsets.only(left: 46.0),
+              //height: 70,
+              width: size.width,
+              color: Colors.pink,
+              child: ListSymptom(
+                symptomText: GroupDetailMide6.aggressiveWrong,
+              ),
+            ),
             spaceHeight(16.0),
             Row(
               children: [
@@ -109,13 +135,21 @@ class _Mide6State extends State<Mide6> {
                   getChbox: () {},
                   value: false,
                 ),
-                TextStr(
+                const TextStr(
                   msg: "มีพฤติกรรมแยกตัวออกจากสังคม",
                   sizeMsg: 14.0,
                 ),
               ],
             ),
-            Container(height: 70, width: size.width, color: Colors.pink),
+            Container(
+              padding: const EdgeInsets.only(left: 46.0),
+              //height: 70,
+              width: size.width,
+              color: Colors.pink,
+              child: ListSymptom(
+                symptomText: GroupDetailMide6.separate,
+              ),
+            ),
             spaceHeight(16.0),
             Row(
               children: [
@@ -123,13 +157,21 @@ class _Mide6State extends State<Mide6> {
                   getChbox: () {},
                   value: false,
                 ),
-                TextStr(
+                const TextStr(
                   msg: "มีอาการหวาดระแวงโดยไม่มีเหตุผล",
                   sizeMsg: 14.0,
                 ),
               ],
             ),
-            Container(height: 70, width: size.width, color: Colors.pink),
+            Container(
+              padding: EdgeInsets.only(left: 46.0),
+              //height: 70,
+              width: size.width,
+              color: Colors.pink,
+              child: ListSymptom(
+                symptomText: GroupDetailMide6.suspiciously,
+              ),
+            ),
             spaceHeight(16.0),
             Row(
               children: [
@@ -137,13 +179,21 @@ class _Mide6State extends State<Mide6> {
                   getChbox: () {},
                   value: false,
                 ),
-                TextStr(
+                const TextStr(
                   msg: "มีอาการหลงผิด หรือ สำคัญตนเองผิด",
                   sizeMsg: 14.0,
                 ),
               ],
             ),
-            Container(height: 70, width: size.width, color: Colors.pink),
+            Container(
+              padding: const EdgeInsets.only(left: 46.0),
+              //height: 70,
+              width: size.width,
+              color: Colors.pink,
+              child: ListSymptom(
+                symptomText: GroupDetailMide6.delusion,
+              ),
+            ),
             spaceHeight(16.0),
             Row(
               children: [
@@ -151,27 +201,48 @@ class _Mide6State extends State<Mide6> {
                   getChbox: () {},
                   value: false,
                 ),
-                TextStr(
+                const TextStr(
                   msg: "มีอาการหูแว่ว หรือ เห็นภาพหลอน",
                   sizeMsg: 14.0,
                 ),
               ],
             ),
-            Container(height: 70, width: size.width, color: Colors.pink),
+            Container(
+              padding: const EdgeInsets.only(left: 46.0),
+              //height: 70,
+              width: size.width,
+              color: Colors.pink,
+              child: ListSymptom(
+                symptomText: GroupDetailMide6.scare,
+              ),
+            ),
             spaceHeight(16.0),
             Row(
               children: [
                 CheckBox(
-                  getChbox: () {},
+                  getChbox: (bool? value) {
+                    setState(() {
+                      value!;
+                    });
+                  },
                   value: false,
                 ),
-                TextStr(
+                const TextStr(
                   msg: "มีพฤติกรรมอื่นที่ผิดปกติจากคนทั่วไป",
                   sizeMsg: 14.0,
                 ),
               ],
             ),
-            Container(height: 70, width: size.width, color: Colors.pink),
+            Container(
+              padding: const EdgeInsets.only(left: 46.0),
+              //height: 70,
+              width: size.width,
+              color: Colors.pink,
+              child: ListSymptom(
+                symptomText: GroupDetailMide6.disorders,
+              ),
+            ),
+            spaceHeight(16.0),
           ],
         ),
       )),

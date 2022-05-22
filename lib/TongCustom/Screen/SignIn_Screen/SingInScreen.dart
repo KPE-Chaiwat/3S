@@ -79,7 +79,6 @@ class LoginScreen_TongCS extends StatelessWidget {
                   colorText: Colors.black,
                   textInButton: "ลงทะเบียนผู้ใช้งานใหม่"),
               space(80),
-              SimpleText()
             ],
           ),
         ),

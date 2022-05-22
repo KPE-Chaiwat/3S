@@ -27,7 +27,7 @@ class _MainMenuState extends State<MainMenu> {
 
     return Container(
       height: (MediaQuery.of(context).size.height),
-      width: 200,
+      width: (MediaQuery.of(context).size.width),
       color: const Color(0xff0b1327),
       //color: Colors.red,
       child: ListView(
