@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 
+import '../TongCustom/Screen/mide6/mide6.dart';
+
 class Page3 extends StatelessWidget {
   const Page3({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Page3Body();
+    return Mide6();
   }
 }
 

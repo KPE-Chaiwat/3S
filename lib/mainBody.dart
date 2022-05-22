@@ -92,6 +92,7 @@ class MainBody extends StatelessWidget {
     MainBodyContext = context;
 
     return Scaffold(
+      backgroundColor: const Color(0xFFFFE9F1),
       appBar: AppBar(
         backgroundColor: const Color(0xFFFFE9F1),
         shadowColor: Colors.transparent,

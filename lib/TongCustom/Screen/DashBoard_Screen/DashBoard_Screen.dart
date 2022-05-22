@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
+import '../../../widget/common/Advancedropdown.dart';
 import 'component_DBScreen/BoxShowData.dart';
 import 'component_DBScreen/ButtonAppBar.dart';
-import 'component_DBScreen/DropDown_NongTongCs.dart';
+
 import 'component_DBScreen/line.dart';
 import 'component_DBScreen/ Boxborder.dart';
 
@@ -36,8 +37,10 @@ class DashBoardScreen extends StatelessWidget {
               specing_left_right, 15.0, specing_left_right, 10.0),
           child: Column(
             children: [
-              AdvanceDropDown_NongTongCs(
-                  topicOfDropdown: "เลือกระดับพื้นที่",
+              AdvanceDropDown(
+                  borderRaio: 10,
+                  borderCO: Colors.black,
+                  // topicOfDropdown: "เลือกระดับพื้นที่",
                   hint: "เขตสุขภาพ",
                   onChangeinside: (newValue) {},
                   value: _value,
@@ -47,8 +50,10 @@ class DashBoardScreen extends StatelessWidget {
               const SizedBox(
                 height: 10,
               ),
-              AdvanceDropDown_NongTongCs(
-                  topicOfDropdown: "เลือกพื้นที่",
+              AdvanceDropDown(
+                  borderRaio: 10,
+                  borderCO: Colors.black,
+                  // topicOfDropdown: "เลือกพื้นที่",
                   hint: "เขตสุขภาพที่7",
                   onChangeinside: (newValue) {},
                   value: _value,

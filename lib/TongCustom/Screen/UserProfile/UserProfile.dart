@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../../../widget/common/Advancedropdown.dart';
 import '../../../widget/common/ComInputText.dart';
-import '../DashBoard_Screen/component_DBScreen/DropDown_NongTongCs.dart';
+
 import '../SignIn_Screen/Conponent_LoginScreen/ButtonCustom.dart';
 import 'Compronent_UserProfile/TopboxBorder.dart';
 import 'Compronent_UserProfile/pictureProfile.dart';
@@ -72,8 +73,8 @@ class _UserProfileState extends State<UserProfile> {
                   const SizedBox(
                     height: 10,
                   ),
-                  AdvanceDropDown_NongTongCs(
-                      topicOfDropdown: "ตำแหน่ง",
+                  AdvanceDropDown(
+                      // topicOfDropdown: "ตำแหน่ง",
                       hint: _value,
                       onChangeinside: (newValue) {},
                       value: _value,
@@ -83,8 +84,8 @@ class _UserProfileState extends State<UserProfile> {
                   const SizedBox(
                     height: 10,
                   ),
-                  AdvanceDropDown_NongTongCs(
-                      topicOfDropdown: "หน่วยงานสังกัด",
+                  AdvanceDropDown(
+                      // topicOfDropdown: "หน่วยงานสังกัด",
                       hint: "โรงพยาบาลจิตเวต",
                       onChangeinside: (newValue) {},
                       value: _value,
@@ -94,8 +95,8 @@ class _UserProfileState extends State<UserProfile> {
                   const SizedBox(
                     height: 10,
                   ),
-                  AdvanceDropDown_NongTongCs(
-                      topicOfDropdown: "สังกัดพื้นที่",
+                  AdvanceDropDown(
+                      // topicOfDropdown: "สังกัดพื้นที่",
                       hint: "เขตสุขภาพที่7",
                       onChangeinside: (newValue) {},
                       value: _value,
