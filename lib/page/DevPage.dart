@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tpk_login_v2/page/Pat9Q.dart';
-
-import 'P14PatMind6/Mind6.dart';
+import 'package:tpk_login_v2/page/page14.dart';
 
 //---------------------------------------------------------
 
@@ -11,12 +9,12 @@ class DevPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     //return Pat9Q();
-    return Mind6();
+    return PageDevBody();
   }
 }
 
-class Page1Body extends StatelessWidget {
-  const Page1Body({Key? key}) : super(key: key);
+class PageDevBody extends StatelessWidget {
+  const PageDevBody({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

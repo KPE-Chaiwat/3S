@@ -4,11 +4,12 @@ import 'package:tpk_login_v2/page/devpage.dart';
 
 import '../../bloc/BlocEvent/LoginEvent.dart';
 import '../../mainBody.dart';
-import '../../page/SignIn.dart';
-import '../../page/Dashborad.dart';
-import '../../page/UsePro.dart';
-import '../../page/PatInfo.dart';
-import '../../page/PatInfoE.dart';
+
+import '../../page/page1.dart';
+import '../../page/page2.dart';
+import '../../page/page3.dart';
+import '../../page/page4.dart';
+import '../../page/page5.dart';
 import 'sub_widget.dart';
 
 late BuildContext MenuContext;

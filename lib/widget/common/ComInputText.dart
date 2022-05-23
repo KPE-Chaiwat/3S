@@ -295,9 +295,8 @@ class _ComInputTextState extends State<ComInputText> {
                 fontSize: widget.nFontSize,
                 color: CustomTheme.colorGreyDisable),
             border: const OutlineInputBorder(
-                // borderRadius:
-                //     const BorderRadius.all(const Radius.circular(8.0))
-                ),
+                borderRadius:
+                    const BorderRadius.all(const Radius.circular(8.0))),
             contentPadding:
                 const EdgeInsets.only(top: 8.0, bottom: 8.0, left: 16.0),
             enabledBorder: OutlineInputBorder(

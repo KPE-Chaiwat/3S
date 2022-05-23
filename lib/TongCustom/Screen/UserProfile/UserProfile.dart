@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
+import '../../../page/P1SignIn/Conpronent_Signin/ButtonCustom.dart';
 import '../../../widget/common/Advancedropdown.dart';
 import '../../../widget/common/ComInputText.dart';
 
-import '../SignIn_Screen/Conponent_LoginScreen/ButtonCustom.dart';
 import 'Compronent_UserProfile/TopboxBorder.dart';
 import 'Compronent_UserProfile/pictureProfile.dart';
 

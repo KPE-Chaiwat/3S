@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 //--------------------------------------------- Bloc
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../TongCustom/Screen/SignIn_Screen/SingInScreen.dart';
+import 'P1SignIn/SingInScreen.dart';
 import '../bloc/BlocEvent/LoginEvent.dart';
 import '../mainBody.dart';
 import '../widget/common/ComInputText.dart';
@@ -13,7 +13,8 @@ class LoginPageWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return LoginScreen_TongCS();
+    return SignIn();
+    //return Container();
   }
 }
 /*
