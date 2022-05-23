@@ -36,27 +36,27 @@ class BoxShowDataSource extends StatelessWidget {
               Radius.circular(20.0) //                 <--- border radius here
               ),
         ),
-        padding: EdgeInsets.all(15),
+        padding: EdgeInsets.only(left: 3.5, top: 7.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
               title ?? "",
-              style: _style(16, true),
+              style: _style(15, true),
             ),
             const SizedBox(
               height: 5,
             ),
             Text(
               subtitle ?? "",
-              style: _style(11, false),
+              style: _style(13, false),
             ),
             const SizedBox(
               height: 10,
             ),
             Text(
               subtitle1 ?? "",
-              style: _style(14, false),
+              style: _style(9, false),
             ),
             Text(
               subtitle2 ?? "",

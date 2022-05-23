@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../TongCustom/Screen/UserProfile/UserProfile.dart';
+import '../TongCustom/Screen/DashBoard_Screen/DashBoard_Screen.dart';
 
 class Page2 extends StatelessWidget {
   const Page2({Key? key}) : super(key: key);
@@ -8,7 +8,7 @@ class Page2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     //return Page2Body();
-    return UserProfile();
+    return Dashborad();
   }
 }
 

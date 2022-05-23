@@ -8,7 +8,7 @@ import 'bloc/cubit/NotificationEvent.dart';
 import 'bloc/cubit/Rebuild.dart';
 import 'data/global.dart';
 import 'page/loginpage.dart';
-import 'widget/appbar/AppBar.dart';
+
 import 'widget/menu/mainmenu.dart';
 import 'widget/notification/noti01.dart';
 

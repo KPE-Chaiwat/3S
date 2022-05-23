@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../TongCustom/Screen/DashBoard_Screen/DashBoard_Screen.dart';
-import '../widget/common/Checkbox.dart';
-
 bool isChecked = false;
 
 class Page0 extends StatelessWidget {
@@ -10,8 +7,8 @@ class Page0 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    //return Page0Body();
-    return Dashborad();
+    return Page0Body();
+    //return Dashborad();
   }
 }
 

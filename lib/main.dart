@@ -40,9 +40,11 @@ class MainContext extends StatelessWidget {
         return MaterialApp(
           title: 'Flutter Login',
           theme: ThemeData(
-            primarySwatch: Colors.blue,
-            // backgroundColor: Color(0xffFFE9F1),
-          ),
+              primarySwatch: Colors.blue,
+              fontFamily: 'Mitr',
+              textTheme: Theme.of(context).textTheme.apply(
+                    fontFamily: 'Mitr',
+                  )),
           debugShowCheckedModeBanner: false,
           home: const MainBlocRebuild(),
         );

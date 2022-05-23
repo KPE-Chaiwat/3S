@@ -1,18 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:tpk_login_v2/page/page0.dart';
 
+import '../../../page/P14PatMind6/PatMind6var.dart';
 import '../../../widget/common/Checkbox.dart';
-import 'compronent_mide6/ListTextSymptom.dart';
-import 'compronent_mide6/TextString.dart';
-import 'compronent_mide6/groupText_detailData.dart';
+import 'detailMind6.dart/ListTextSymptom.dart';
+import 'detailMind6.dart/TextString.dart';
+import 'detailMind6.dart/groupText_detailData.dart';
 
-class Mide6 extends StatefulWidget {
-  Mide6({Key? key}) : super(key: key);
+class Mind6 extends StatefulWidget {
+  const Mind6({Key? key}) : super(key: key);
 
   @override
-  State<Mide6> createState() => _Mide6State();
+  State<Mind6> createState() => _Mind6State();
 }
 
-class _Mide6State extends State<Mide6> {
+class _Mind6State extends State<Mind6> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -66,8 +68,12 @@ class _Mide6State extends State<Mide6> {
             Row(
               children: [
                 CheckBox(
-                  getChbox: () {},
-                  value: false,
+                  value: DataBodyMind6.SpeakWrong.bools, //isChecked,
+                  getChbox: (value) {
+                    setState(() {
+                      DataBodyMind6.SpeakWrong.bools = value;
+                    });
+                  },
                 ),
                 const TextStr(
                   msg: "มีลักษณะการพูดที่ผิดปกติ",
@@ -79,7 +85,7 @@ class _Mide6State extends State<Mide6> {
               padding: const EdgeInsets.only(left: 46.0),
               //height: 70,
               width: size.width,
-              color: Colors.pink,
+              // color: Colors.pink,
               child: ListSymptom(
                 symptomText: GroupDetailMide6.speakingWrong,
               ),
@@ -88,8 +94,12 @@ class _Mide6State extends State<Mide6> {
             Row(
               children: [
                 CheckBox(
-                  getChbox: () {},
-                  value: false,
+                  value: DataBodyMind6.SuitUpWrong.bools,
+                  getChbox: (value) {
+                    setState(() {
+                      isChecked = value;
+                    });
+                  },
                 ),
                 const TextStr(
                   msg: "มีลักษณะการแต่งกายที่ผิดปกติ",
@@ -101,7 +111,7 @@ class _Mide6State extends State<Mide6> {
               padding: const EdgeInsets.only(left: 46.0),
               //height: 70,
               width: size.width,
-              color: Colors.pink,
+              //color: Colors.pink,
               child: ListSymptom(
                 symptomText: GroupDetailMide6.dressingWrong,
               ),
@@ -110,8 +120,12 @@ class _Mide6State extends State<Mide6> {
             Row(
               children: [
                 CheckBox(
-                  getChbox: () {},
-                  value: false,
+                  value: isChecked,
+                  getChbox: (value) {
+                    setState(() {
+                      isChecked = value;
+                    });
+                  },
                 ),
                 const TextStr(
                   msg: "มีพฤติกรรมก้าวร้าว วุ่นวาย ทำร้ายผู้อื่น",
@@ -123,7 +137,7 @@ class _Mide6State extends State<Mide6> {
               padding: const EdgeInsets.only(left: 46.0),
               //height: 70,
               width: size.width,
-              color: Colors.pink,
+              // color: Colors.pink,
               child: ListSymptom(
                 symptomText: GroupDetailMide6.aggressiveWrong,
               ),
@@ -132,8 +146,12 @@ class _Mide6State extends State<Mide6> {
             Row(
               children: [
                 CheckBox(
-                  getChbox: () {},
-                  value: false,
+                  value: isChecked,
+                  getChbox: (value) {
+                    setState(() {
+                      isChecked = value;
+                    });
+                  },
                 ),
                 const TextStr(
                   msg: "มีพฤติกรรมแยกตัวออกจากสังคม",
@@ -145,7 +163,7 @@ class _Mide6State extends State<Mide6> {
               padding: const EdgeInsets.only(left: 46.0),
               //height: 70,
               width: size.width,
-              color: Colors.pink,
+              // color: Colors.pink,
               child: ListSymptom(
                 symptomText: GroupDetailMide6.separate,
               ),
@@ -154,8 +172,12 @@ class _Mide6State extends State<Mide6> {
             Row(
               children: [
                 CheckBox(
-                  getChbox: () {},
-                  value: false,
+                  value: isChecked,
+                  getChbox: (value) {
+                    setState(() {
+                      isChecked = value;
+                    });
+                  },
                 ),
                 const TextStr(
                   msg: "มีอาการหวาดระแวงโดยไม่มีเหตุผล",
@@ -167,7 +189,7 @@ class _Mide6State extends State<Mide6> {
               padding: EdgeInsets.only(left: 46.0),
               //height: 70,
               width: size.width,
-              color: Colors.pink,
+              //  color: Colors.pink,
               child: ListSymptom(
                 symptomText: GroupDetailMide6.suspiciously,
               ),
@@ -189,7 +211,7 @@ class _Mide6State extends State<Mide6> {
               padding: const EdgeInsets.only(left: 46.0),
               //height: 70,
               width: size.width,
-              color: Colors.pink,
+              // color: Colors.pink,
               child: ListSymptom(
                 symptomText: GroupDetailMide6.delusion,
               ),
@@ -198,8 +220,12 @@ class _Mide6State extends State<Mide6> {
             Row(
               children: [
                 CheckBox(
-                  getChbox: () {},
-                  value: false,
+                  value: isChecked,
+                  getChbox: (value) {
+                    setState(() {
+                      isChecked = value;
+                    });
+                  },
                 ),
                 const TextStr(
                   msg: "มีอาการหูแว่ว หรือ เห็นภาพหลอน",
@@ -211,7 +237,7 @@ class _Mide6State extends State<Mide6> {
               padding: const EdgeInsets.only(left: 46.0),
               //height: 70,
               width: size.width,
-              color: Colors.pink,
+              //color: Colors.pink,
               child: ListSymptom(
                 symptomText: GroupDetailMide6.scare,
               ),
@@ -220,12 +246,12 @@ class _Mide6State extends State<Mide6> {
             Row(
               children: [
                 CheckBox(
-                  getChbox: (bool? value) {
+                  value: isChecked,
+                  getChbox: (value) {
                     setState(() {
-                      value!;
+                      isChecked = value;
                     });
                   },
-                  value: false,
                 ),
                 const TextStr(
                   msg: "มีพฤติกรรมอื่นที่ผิดปกติจากคนทั่วไป",
@@ -237,7 +263,7 @@ class _Mide6State extends State<Mide6> {
               padding: const EdgeInsets.only(left: 46.0),
               //height: 70,
               width: size.width,
-              color: Colors.pink,
+              // color: Colors.pink,
               child: ListSymptom(
                 symptomText: GroupDetailMide6.disorders,
               ),

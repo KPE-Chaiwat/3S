@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:tpk_login_v2/page/devpage.dart';
 
 import '../../bloc/BlocEvent/LoginEvent.dart';
 import '../../mainBody.dart';
-import '../../page/page1.dart';
-import '../../page/page2.dart';
-import '../../page/page3.dart';
-import '../../page/page4.dart';
-import '../../page/page5.dart';
+import '../../page/SignIn.dart';
+import '../../page/Dashborad.dart';
+import '../../page/UsePro.dart';
+import '../../page/PatInfo.dart';
+import '../../page/PatInfoE.dart';
 import 'sub_widget.dart';
 
 late BuildContext MenuContext;
@@ -55,42 +56,59 @@ class Data_Menu_mainmenu extends StatelessWidget {
           height: 20,
         ),
         Align(
-            alignment: Alignment.center,
+            alignment: Alignment.centerLeft,
             child: Container(
                 height: 40,
                 width: 180,
-                color: Colors.white,
+                //color: Colors.white,
                 child: Padding(
                   padding: const EdgeInsetsDirectional.all(1),
                   child: Container(
                     height: 35,
                     decoration: const BoxDecoration(
-                      color: Colors.white,
+                      // color: Colors.white,
                       image: DecorationImage(
-                        image: AssetImage("assets/images/logo_tpk.png"),
+                        image: AssetImage(
+                            "assets/icons/sra@3x.png"), //<-----icondrower
                         fit: BoxFit.fitHeight,
                       ),
                     ),
                   ),
                 ))),
+//NongTong def
         menu_normal(
-          name: "Page1",
+          name: "Dashboard",
           page: Page1(),
           Lv: 1,
         ),
         menu_normal(
-          name: "Page2",
+          name: "ลงบันทึกข้อมูลผู้ป่วยใหม่",
           page: Page2(),
           Lv: 1,
         ),
         menu_normal(
-          name: "Page3",
+          name: "ลงบันทึกข้อมูลการเฝ้าระวังผู้ป่วยเดิม",
           page: Page3(),
           Lv: 1,
         ),
         menu_normal(
-          name: "Page4",
+          name: "แก้ข้อมูลผู้ใช้งาน",
           page: Page4(),
+          Lv: 1,
+        ),
+        menu_normal(
+          name: "แจ้งเหตุขัดข้อง",
+          page: Page4(),
+          Lv: 1,
+        ),
+        menu_normal(
+          name: "ติดต่อเจ้าหน้าที่",
+          page: Page4(),
+          Lv: 1,
+        ),
+        menu_normal(
+          name: "devPage",
+          page: DevPage(),
           Lv: 1,
         ),
         menu_normal(
@@ -99,7 +117,7 @@ class Data_Menu_mainmenu extends StatelessWidget {
           Lv: 5,
         ),
         menu_logout(
-          name: "Logout",
+          name: "ออกจากระบบ",
         ),
         const Divider(
           color: Color(0x4dffffff),

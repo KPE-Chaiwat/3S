@@ -90,3 +90,15 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+  fonts:
+    - family: Mitr
+      fonts:
+        - asset: assets/fonts/Mitr-Regular.ttf
+        - asset: assets/fonts/Mitr-ExtraLight.ttf
+        - asset: assets/fonts/Mitr-Light.ttf
+        - asset: assets/fonts/Mitr-Medium.ttf
+          weight: 400
+        - asset: assets/fonts/Mitr-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Mitr-Bold.ttf
+          weight: 800
