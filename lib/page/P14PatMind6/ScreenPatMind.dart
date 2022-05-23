@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:tpk_login_v2/page/page0.dart';
 
 import 'PatMind6var.dart';
 import '../../widget/common/Checkbox.dart';
@@ -98,7 +97,7 @@ class _PatMind6State extends State<PatMind6> {
                   value: DataBodyMind6.SuitUpWrong.bools,
                   getChbox: (value) {
                     setState(() {
-                      isChecked = value;
+                      DataBodyMind6.SuitUpWrong.bools = value;
                     });
                   },
                 ),
@@ -121,10 +120,10 @@ class _PatMind6State extends State<PatMind6> {
             Row(
               children: [
                 CheckBox(
-                  value: isChecked,
+                  value: DataBodyMind6.aggressiveW.bools,
                   getChbox: (value) {
                     setState(() {
-                      isChecked = value;
+                      DataBodyMind6.aggressiveW.bools = value;
                     });
                   },
                 ),
@@ -147,10 +146,10 @@ class _PatMind6State extends State<PatMind6> {
             Row(
               children: [
                 CheckBox(
-                  value: isChecked,
+                  value: DataBodyMind6.separateW.bools,
                   getChbox: (value) {
                     setState(() {
-                      isChecked = value;
+                      DataBodyMind6.separateW.bools = value;
                     });
                   },
                 ),
@@ -173,10 +172,10 @@ class _PatMind6State extends State<PatMind6> {
             Row(
               children: [
                 CheckBox(
-                  value: isChecked,
+                  value: DataBodyMind6.suspiciouslyW.bools,
                   getChbox: (value) {
                     setState(() {
-                      isChecked = value;
+                      DataBodyMind6.suspiciouslyW.bools = value;
                     });
                   },
                 ),
@@ -199,8 +198,12 @@ class _PatMind6State extends State<PatMind6> {
             Row(
               children: [
                 CheckBox(
-                  getChbox: () {},
-                  value: false,
+                  getChbox: (value) {
+                    setState(() {
+                      DataBodyMind6.delusionW.bools = value;
+                    });
+                  },
+                  value: DataBodyMind6.delusionW.bools,
                 ),
                 const TextStr(
                   msg: "มีอาการหลงผิด หรือ สำคัญตนเองผิด",
@@ -221,10 +224,10 @@ class _PatMind6State extends State<PatMind6> {
             Row(
               children: [
                 CheckBox(
-                  value: isChecked,
+                  value: DataBodyMind6.scareW.bools,
                   getChbox: (value) {
                     setState(() {
-                      isChecked = value;
+                      DataBodyMind6.scareW.bools = value;
                     });
                   },
                 ),
@@ -247,10 +250,10 @@ class _PatMind6State extends State<PatMind6> {
             Row(
               children: [
                 CheckBox(
-                  value: isChecked,
+                  value: DataBodyMind6.disordersW.bools,
                   getChbox: (value) {
                     setState(() {
-                      isChecked = value;
+                      DataBodyMind6.disordersW.bools = value;
                     });
                   },
                 ),

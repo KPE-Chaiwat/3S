@@ -6,7 +6,7 @@ class LineContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double _width = MediaQuery.of(context).size.width;
-    const double _padding = 42.0;
+
     return Container(
       height: 5.0,
       width: _width,

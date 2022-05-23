@@ -30,15 +30,15 @@ class _SignInState extends State<SignIn> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              space(30),
+              space(19),
               const LogoSar(),
               const LineContainer(),
-              space(20),
+              space(17.8),
               Suicidality(
                 maxwidth: _width,
                 title: "Suicidality and Rick Assessment",
               ),
-              space(30),
+              space(18.0),
               ComInputText(
                 sPlaceholder: "เลขประจำตัวผู้เก็บข้อมูล",
                 height: 40,
@@ -53,22 +53,19 @@ class _SignInState extends State<SignIn> {
                 },
                 isEnabled: true,
               ),
-              space(30),
+              space(12.0),
               ComInputText(
                   sPlaceholder: "รหัสผ่าน",
                   height: 40,
                   width: _width,
                   isContr: true,
-                  // fnContr: (input) {
-                  //   Logindata_constant.isControl = input;
-                  // },
                   sValue: DataSignin.passWord.str,
                   returnfunc: (String s) {
                     DataSignin.passWord.str = s;
                   },
                   isEnabled: true,
                   isPassword: true),
-              space(20),
+              space(12),
               ForgotPassword(
                 //จดจำฉัน
                 value: DataSignin.rememberUserPass.bools,
@@ -81,19 +78,19 @@ class _SignInState extends State<SignIn> {
                   print("parin");
                 }, //ลืมรหัสผ่าน?
               ),
-              space(50),
+              space(27.5),
               const ButtonCS(
                   colorButton: Colors.black,
                   colorText: Colors.white,
                   textInButton: "ผู้ใช้งาน"),
-              space(30),
+              space(18.0),
               const ButtonCS(
                   colorBorder: Colors.black,
                   colorButton: Colors.white,
                   colorText: Colors.black,
                   textInButton: "ลงทะเบียนผู้ใช้งานใหม่"),
-              space(80),
-              SimpleText()
+              space(39.0),
+              const SimpleText()
             ],
           ),
         ),

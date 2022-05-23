@@ -5,7 +5,6 @@ import 'package:tpk_login_v2/page/devpage.dart';
 import '../../bloc/BlocEvent/LoginEvent.dart';
 import '../../mainBody.dart';
 
-import '../../page/page1.dart';
 import '../../page/page2.dart';
 import '../../page/page3.dart';
 import '../../page/page4.dart';
@@ -79,7 +78,7 @@ class Data_Menu_mainmenu extends StatelessWidget {
 //NongTong def
         menu_normal(
           name: "Dashboard",
-          page: Page1(),
+          page: Page2(),
           Lv: 1,
         ),
         menu_normal(

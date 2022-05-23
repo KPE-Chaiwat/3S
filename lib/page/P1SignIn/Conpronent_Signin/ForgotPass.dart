@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../../../../widget/common/Checkbox.dart';
-import '../../../TongCustom/ConStant/constant.dart';
 
 class ForgotPassword extends StatefulWidget {
   ForgotPassword(
