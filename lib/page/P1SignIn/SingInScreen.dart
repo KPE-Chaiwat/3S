@@ -80,9 +80,16 @@ class _SignInState extends State<SignIn> {
               ),
               space(27.5),
               const ButtonCS(
-                  colorButton: Colors.black,
-                  colorText: Colors.white,
-                  textInButton: "ผู้ใช้งาน"),
+                colorButton: Colors.black,
+                colorText: Colors.white,
+                textInButton: "ผู้ใช้งาน",
+              ),
+              space(18.0),
+              const ButtonCS(
+                  colorBorder: Colors.black,
+                  colorButton: Colors.white,
+                  colorText: Colors.black,
+                  textInButton: "ลงทะเบียนผู้ใช้งานใหม่"),
               space(18.0),
               const ButtonCS(
                   colorBorder: Colors.black,

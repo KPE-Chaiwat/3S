@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 
-import 'P14PatMind6/ScreenPatMind.dart';
-
 class Page14 extends StatelessWidget {
   const Page14({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return PatMind6();
+    return Page14Body();
   }
 }
 

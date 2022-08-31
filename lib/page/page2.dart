@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 
-import 'P2Dashborad/DashBoard_Screen.dart';
-
 class Page2 extends StatelessWidget {
   const Page2({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     //return Page2Body();
-    return Dashborad();
+    return Page2Body();
   }
 }
 

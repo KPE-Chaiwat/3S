@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 
-import 'P1SignIn/SingInScreen.dart';
-
 class Page1 extends StatelessWidget {
   const Page1({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return SignIn();
+    return Page1Body();
     //return Dashborad();
   }
 }

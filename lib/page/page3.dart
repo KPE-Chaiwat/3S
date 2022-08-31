@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
 
-import 'P3UsePro/UsePro.dart';
-
 class Page3 extends StatelessWidget {
   const Page3({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    // return Page3Body();
-    return const UsePro();
+    return const Page3Body();
   }
 }
 

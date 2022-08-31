@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 
 import 'package:tpk_login_v2/page/page3.dart';
 
-import 'P3UsePro/UsePro.dart';
-
 //---------------------------------------------------------
 
 class DevPage extends StatelessWidget {
@@ -11,7 +9,7 @@ class DevPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return UsePro();
+    return PageDevBody();
     // return PageDevBody();
   }
 }
